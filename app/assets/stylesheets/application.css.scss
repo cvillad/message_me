@@ -14,3 +14,11 @@
  *= require_self
  */
  @import "semantic-ui";
+
+ .ui.vertical.menu{
+   width: auto;
+ }
+
+ .chatbox{
+   height: 450px;
+ }

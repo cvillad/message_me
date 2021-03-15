@@ -18,14 +18,14 @@
 //= require jquery
 //= require semantic-ui
 
-scroll_bottom = () => {
+scroll_bottom = function(){
   if ($("#messages").length > 0){
     $("#messages").scrollTop($("#messages")[0].scrollHeight)
   }
 } 
 
-submit_message = () => {
-  $("#message_body").on("keydown", (e) => {
+submit_message = function(){
+  $("#message_body").on("keydown", function(e){
     if (e.keyCode === 13){
       console.log("lol");
       $("button").click();
@@ -34,9 +34,9 @@ submit_message = () => {
   });
 };
 
-$(document).on("turbolinks:load", ()=>{
+$(document).on("turbolinks:load", function(){
   $(".ui.dropdown").dropdown();
-  $('.message .close').on('click', ()=>{
+  $('.message .close').on('click', function(){
     $(this).closest('.message').transition('fade');
   });
   submit_message()
